@@ -5,6 +5,7 @@
     width: 350px;
     position: relative;
     top: 50px;
+    left: 70px;
 }
 
 #imageContainer {
@@ -21,4 +22,15 @@ img {
 #bigImg {
     height: 50vh;
     width: auto;
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+    body {
+        color: white;
+    }
+}
+@media (min-width: 600px) and (max-width: 1280px) {
+    body {
+        color: white;
+    }
 }
