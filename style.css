@@ -1,51 +1,24 @@
-#background {
-    background-color: olive;
-    height: 500px;
-    position: relative;
-}
-
-#mainLeft {
-    position: absolute;
-    top: 250px;
-}
-
-#mainRight {
-    position: absolute;
-    top: 250px;
-    right: 0px;
-}
-
-.previews {
+#previewContainer {
     display: flex;
-    height: auto;
     justify-content: center;
-    gap: 5px;
-    background-color: red;
+    flex-wrap: wrap;
+    width: 350px;
+    position: relative;
+    top: 50px;
 }
 
-.previewBar {
-    display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
-    gap: 20px;
-    background-color: purple;
+#imageContainer {
+    width: 375px;
+    height: 50vh;
 }
 
-p {
-    text-align: right;
-    background-color: blue;
-    color: white;
-}
 
 img {
-    width: 100px;
-    background-color: orange;
+    height: 50px;
+    width: auto;
 }
 
-body {
-    background-color: black;
-}
-
-.button {
-    background-color: wheat;
-
+#bigImg {
+    height: 50vh;
+    width: auto;
 }
