@@ -1,3 +1,20 @@
+#background {
+    background-color: olive;
+    height: 500px;
+    position: relative;
+}
+
+#mainLeft {
+    position: absolute;
+    top: 250px;
+}
+
+#mainRight {
+    position: absolute;
+    top: 250px;
+    right: 0px;
+}
+
 .previews {
     display: flex;
     height: auto;
