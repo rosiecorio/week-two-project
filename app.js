@@ -1,6 +1,7 @@
 const previewContainer = document.getElementById('previewContainer')
 const backImage = document.getElementById('imageContainer')
 
+//new array structure
 let images = [
     {
         src: "https://media.istockphoto.com/id/1446199740/photo/path-through-a-sunlit-forest.jpg?s=612x612&w=0&k=20&c=DuozAED7qfI5E6PcVb4bHtFJ_uM_n1duok56j_liLEA=",
@@ -30,40 +31,64 @@ let images = [
 
 function createPreviewContainer(image) {
     images.forEach(function (image) {
-        // for each of the objects, create an image tag
-        let imageElem = document.createElement('img')
+        let imageElem = document.createElement('img');
 
-        // set src and alt properties of the imageEleme
+        imageElem.src = image.src;
+        imageElem.alt = image.alt;
 
-        imageElem.src = image.src
-        imageElem.alt = image.alt
-
-        // we create a unique even listener 
         imageElem.addEventListener('click', function() {
-            console.log(image)
-            // when i click on a thumbnail, I'll call 'createBigImage' to set it as the main image
-            // pass in the information of the image i clicked on as an argument.
-            createBigImage(image)
-            
+            console.log(image);
+            createBigImage(image);        
         })
 
-
-        // make my images keyboard focusable
-        imageElem.setAttribute('tabindex', '0')
-
-        previewContainer.appendChild(imageElem)
-
+        imageElem.setAttribute('tabindex', '0');
+        previewContainer.appendChild(imageElem);
     })
-
 }
 
 function createBigImage(img) {
-    backImage.innerHTML = ''
-    const bigImage = document.createElement('img')
-    bigImage.src = img.src
-    bigImage.alt = img.alt
-    backImage.appendChild(bigImage)
-    bigImage.setAttribute('id', 'bigImg')
+    backImage.innerHTML = '';
+    const bigImage = document.createElement('img');
+    bigImage.src = img.src;
+    bigImage.alt = img.alt;
+    backImage.appendChild(bigImage);
+    bigImage.setAttribute('id', 'bigImg');
 }
 
+
+//invoke whole function
 createPreviewContainer()
+
+let leftButton = document.getElementById('leftButton');
+let rightButton = document.getElementById('rightButton');
+
+// create left and right function
+
+rightButton.addEventListener('click', changeImage);
+leftButton.addEventListener('click', changeImage);
+console.log(backImage.indexOf(innerHTML))
+
+function changeImage(indexNumber) {
+    backImage.indexOf(innerHTML)
+    
+    indexNumber++
+    indexNumber--
+}
+
+let index = 0;
+
+//need to update index on a click event
+//which will be +1 or -1 depending on left or right button.
+//will also be updated if someone clicks on a specific image
+//in the preview bar.
+
+//go to next index = current index + 1 (right)
+//got to previous index = current index - 2 (left)
+
+/*function rightClick() {
+   
+   
+   
+    for (i=0; i < images.length; i++)
+        backImage.appendChild(images[i])
+}*/

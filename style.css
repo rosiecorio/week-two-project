@@ -1,27 +1,48 @@
+main .button {
+    display: flex;
+    align-items: center;
+}
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    background-color: white;
+    height: 40px;
+    width: 80px;
+}
+
 #previewContainer {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 350px;
+    justify-content: space-between;
     position: relative;
     top: 50px;
-    left: 70px;
 }
 
 #imageContainer {
-    width: 375px;
-    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
 
 img {
     height: 50px;
     width: auto;
+    margin: 5px;
 }
 
 #bigImg {
     height: 50vh;
     width: auto;
+    position: relative;
+}
+
+body {
+    background-color: black;
+    margin: 0px;
 }
 
 @media (min-width: 1200px) and (max-width: 1600px) {
