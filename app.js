@@ -29,6 +29,8 @@ let images = [
     }
 ]
 
+createBigImage(images[0])
+
 function createPreviewContainer(image) {
     images.forEach(function (image) {
         let imageElem = document.createElement('img');
@@ -55,40 +57,23 @@ function createBigImage(img) {
     bigImage.setAttribute('id', 'bigImg');
 }
 
-
-//invoke whole function
 createPreviewContainer()
 
 let leftButton = document.getElementById('leftButton');
 let rightButton = document.getElementById('rightButton');
 
-// create left and right function
+rightButton.addEventListener('click', function() {
+    changeImage(1)
+});
 
-rightButton.addEventListener('click', changeImage);
-leftButton.addEventListener('click', changeImage);
-console.log(backImage.indexOf(innerHTML))
+leftButton.addEventListener('click', function() {
+    changeImage(-1)
+});
 
-function changeImage(indexNumber) {
-    backImage.indexOf(innerHTML)
-    
-    indexNumber++
-    indexNumber--
+let currentImageIndex = 0;
+
+function changeImage (index) {
+    currentImageIndex += index
+
+    createBigImage (images[currentImageIndex])
 }
-
-let index = 0;
-
-//need to update index on a click event
-//which will be +1 or -1 depending on left or right button.
-//will also be updated if someone clicks on a specific image
-//in the preview bar.
-
-//go to next index = current index + 1 (right)
-//got to previous index = current index - 2 (left)
-
-/*function rightClick() {
-   
-   
-   
-    for (i=0; i < images.length; i++)
-        backImage.appendChild(images[i])
-}*/
