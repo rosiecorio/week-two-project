@@ -46,10 +46,24 @@ body {
 }
 
 @media (min-width: 1200px) and (max-width: 1600px) {
-    body {
-        color: white;
+    #bigImg {
+        width: auto;
+        height: 600px;
+    }
+
+    #previewContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    #imageContainer {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        height: 80vh;
     }
 }
+
 @media (min-width: 600px) and (max-width: 1280px) {
     #bigImg {
         width: 100vh;
