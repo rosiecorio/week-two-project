@@ -10,13 +10,16 @@
     border-radius: 25px;
 }
 
-#leftButton {
+/*#leftButton {
 
 }
 
 #rightButton {
     background-image: url(/assets/next-button.png);
 }
+*/
+
+/* button background image not working*/
 
 #previewContainer {
     display: flex;

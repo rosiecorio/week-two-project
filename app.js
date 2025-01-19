@@ -76,8 +76,6 @@ function changeImage (index) {
     currentImageIndex += index
 
     createBigImage (images[currentImageIndex])
-} if (currentImageIndex === 0) {
-    currentImageIndex = images.length
 } 
 
 //why does this make right button not function? ^^
@@ -85,3 +83,10 @@ function changeImage (index) {
 /*else if (currentImageIndex === 5) {
     currentImageIndex = images[0]
 } */
+
+/*  if (currentImageIndex === 0) {
+    currentImageIndex = images.length
+
+this makes right button dysfunctional because it applies to both buttons.
+if first image is shown, right button is pressed and index = 6 which
+doesnt exist. */
