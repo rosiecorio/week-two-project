@@ -74,8 +74,12 @@ let currentImageIndex = 0;
 
 function changeImage (index) {
     currentImageIndex += index
-
+    
+    if (currentImageIndex >= images.length) currentImageIndex = 0
+    if (currentImageIndex < 0) currentImageIndex = images.length - 1
+    
     createBigImage (images[currentImageIndex])
+    
 } 
 
 //why does this make right button not function? ^^
@@ -89,4 +93,7 @@ function changeImage (index) {
 
 this makes right button dysfunctional because it applies to both buttons.
 if first image is shown, right button is pressed and index = 6 which
-doesnt exist. */
+doesnt exist. 
+
+how to apply above if statement to individual buttons?
+*/
