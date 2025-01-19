@@ -64,7 +64,7 @@ let rightButton = document.getElementById('rightButton');
 
 rightButton.addEventListener('click', function() {
     changeImage(1)
-});
+}); 
 
 leftButton.addEventListener('click', function() {
     changeImage(-1)
@@ -76,4 +76,12 @@ function changeImage (index) {
     currentImageIndex += index
 
     createBigImage (images[currentImageIndex])
-}
+} if (currentImageIndex === 0) {
+    currentImageIndex = images.length
+} 
+
+//why does this make right button not function? ^^
+
+/*else if (currentImageIndex === 5) {
+    currentImageIndex = images[0]
+} */
